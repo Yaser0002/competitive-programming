@@ -1,0 +1,68 @@
+
+#include <bits/stdc++.h>
+#include<iomanip>
+#include<numeric>
+using namespace std;
+bool isprime(int x){
+  if(x==2)return true;
+  else{
+    for (int i = 2; i < x; i++)
+    {
+     if(x%i==0)return false;
+
+    }
+    
+  }
+  return true;
+}
+
+void solve() {
+string s;
+cin>>s;
+bool flag=1;
+if(s[0]>=97 && s[0]<=122){
+  for (int i = 1; i < s.length(); i++)
+  {
+    if(s[i]>=65 && s[i]<=90);
+    else flag=0;
+  }
+  if(flag){
+  for (int i = 0; i < s.length(); i++)
+  {
+     if(s[i]>=97 && s[i]<=122)s[i]=char(toupper(s[i]));
+     else s[i]=char(tolower(s[i]));
+  }
+  cout<<s;
+  return;
+}
+}
+
+bool flag1=1;
+if(s[0]>=65 && s[0]<=90){
+  for (int i = 0; i < s.length(); i++)
+  {
+    if(s[i]>=65 && s[i]<=90);
+    else flag1=0;
+  }
+   if(flag1){
+  for (int i = 0; i < s.length(); i++)
+  {
+     s[i]=char(tolower(s[i]));
+  }
+  cout<<s;
+  return;
+ }
+ }
+ cout<<s;
+}
+int main(){
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+ // int t;
+//cin >> t;
+//while(t--){
+    solve();
+//cout<<endl;}
+
+}
