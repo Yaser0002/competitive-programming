@@ -1,0 +1,51 @@
+
+#include <bits/stdc++.h>
+#include<iomanip>
+#include<numeric>
+using namespace std;
+bool isprime(int x){
+  if(x==2)return true;
+  else{
+    for (int i = 2; i < x; i++)
+    {
+     if(x%i==0)return false;
+
+    }
+    
+  }
+  return true;
+}
+
+void solve() {
+int n;
+cin>>n;
+if(n==1){
+  cout<<0;
+  return;
+}
+else if(n==2){
+  cout<<1;
+  return;
+}
+long long sumr=1,suml=0;
+long long res=0;
+for (int i = 3; i <= n ; i++)
+{
+  res=sumr+suml;
+  suml=sumr;
+  sumr=res;
+}
+cout<<res;
+
+ }
+int main(){
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+ // int t;
+//cin >> t;
+//while(t--){
+    solve();
+//cout<<endl;}
+
+}
