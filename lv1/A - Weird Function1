@@ -1,0 +1,39 @@
+
+#include <bits/stdc++.h>
+#include<iomanip>
+#include<numeric>
+using namespace std;
+bool isprime(int x){
+  if(x==2)return true;
+  else{
+    for (int i = 2; i < x; i++)
+    {
+     if(x%i==0)return false;
+
+    }
+    
+  }
+  return true;
+}
+long long  fun(int a){
+ return 2*a+3;
+}
+
+
+void solve() {
+   long long x;
+   cin>>x;
+   cout<<fun(fun(fun(x)))+2*fun(x*fun(x));
+    }
+    
+int main(){
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+   cout.tie(NULL);
+ //int t;
+  //cin >> t;
+  //while(t--)
+    solve();
+}
+
+
